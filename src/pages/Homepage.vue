@@ -1,9 +1,12 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import ChirpList from '../components/ChirpList.vue'
+import AuthenticatedLayout from "../layouts/AuthenticatedLayout.vue";
 </script>
 
 <template>
-  <HelloWorld/>
+  <AuthenticatedLayout>
+    <ChirpList/>
+  </AuthenticatedLayout>
 </template>
 
 <style scoped>

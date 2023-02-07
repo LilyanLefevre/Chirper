@@ -10,7 +10,9 @@ declare module '@vue/runtime-core' {
     BCard: typeof import('bootstrap-vue')['BCard']
     BImg: typeof import('bootstrap-vue')['BImg']
     BMedia: typeof import('bootstrap-vue-next')['BMedia']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    ChirpList: typeof import('./src/components/ChirpList.vue')['default']
+    HelloWorld: typeof import('./src/pages/ChirpList.vue')['default']
+    Navbar: typeof import('./src/components/Navbar.vue')['default']
     Tweet: typeof import('./src/components/Tweet.vue')['default']
     TweetComponent: typeof import('./src/components/TweetComponent.vue')['default']
   }
