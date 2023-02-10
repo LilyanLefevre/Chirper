@@ -1,27 +1,56 @@
+import {Address} from "./Address";
+import {Company} from "./Company";
+
 export class User {
-    private id: number;
-    private completeName: string;
-    private username: string;
+    private readonly _id: number;
+    private readonly _name: string;
+    private readonly _username: string;
+    private readonly _email: string;
+    private readonly _address: Address;
+    private readonly _phone: string;
+    private readonly _website: string;
+    private readonly _company: Company;
 
-    constructor(json: any = {
-        id: 1,
-        completeName: 'Lilyan Lefevre',
-        username: 'lilyan_lfv'
-    }) {
-        this.id = json.id;
-        this.completeName = json.completeName;
-        this.username = json.username;
+    constructor(data: any) {
+        this._id = data.id;
+        this._name = data.name;
+        this._username = data.username;
+        this._email = data.email;
+        this._address = data.address;
+        this._phone = data.phone;
+        this._website = data.website;
+        this._company = data.company;
     }
 
-    getId(): number {
-        return this.id;
+    get id(): number {
+        return this._id;
     }
 
-    getCompleteName(): string {
-        return this.completeName;
+    get name(): string {
+        return this._name;
     }
 
-    getUsername(): string {
-        return this.username;
+    get username(): string {
+        return this._username;
+    }
+
+    get email(): string {
+        return this._email;
+    }
+
+    get address(): Address {
+        return this._address;
+    }
+
+    get phone(): string {
+        return this._phone;
+    }
+
+    get website(): string {
+        return this._website;
+    }
+
+    get company(): Company {
+        return this._company;
     }
 }
