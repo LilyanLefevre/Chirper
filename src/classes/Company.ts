@@ -3,10 +3,10 @@ export class Company {
     private readonly _catchPhrase: string;
     private readonly _bs: string;
 
-    constructor(name: string, catchPhrase: string, bs: string) {
-        this._name = name;
-        this._catchPhrase = catchPhrase;
-        this._bs = bs;
+    constructor(data: any) {
+        this._name = data ? data.name : 'Default Inc.';
+        this._catchPhrase = data ? data.catchPhrase :'Be you, be proud of you, because you can be do what we want to do.';
+        this._bs = data ? data.bs : 'default';
     }
     get bs(): string {
         return this._bs;

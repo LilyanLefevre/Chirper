@@ -2,9 +2,9 @@ export class Geo {
     private readonly _lat: string;
     private readonly _lng: string;
 
-    constructor(lat: string, lng: string) {
-        this._lat = lat;
-        this._lng = lng;
+    constructor(data: any) {
+        this._lat = data ? data.lat : '47.6294444';
+        this._lng = data ? data.lng : '6.152500000000001';
     }
 
     get lng(): string {
@@ -26,12 +26,12 @@ export class Address {
         lng: string;
     };
 
-    constructor(street: string, suite: string, city: string, zipcode: string, geo: Geo) {
-        this._street = street;
-        this._suite = suite;
-        this._city = city;
-        this._zipcode = zipcode;
-        this._geo = geo;
+    constructor(data: any) {
+        this._street = data ? data.street : 'Grande rue';
+        this._suite = data ? data.suite : '';
+        this._city = data ? data.city : 'Vesoul';
+        this._zipcode = data ? data.zipcode : '70000';
+        this._geo = new Geo(data ? data.geo : null);
     }
 
 

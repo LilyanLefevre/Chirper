@@ -12,7 +12,7 @@ class Tweet {
 
     constructor(json: any = {
         id: 1,
-        user: new User(),
+        user: new User(null),
         message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, elit euismod congue bibendum, erat est blandit velit, vel blandit velit enim vel quam.\n',
         updated_at: '2023-02-02 20:00:00',
         created_at: '2022-02-01 08:00:00',

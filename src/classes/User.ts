@@ -12,14 +12,14 @@ export class User {
     private readonly _company: Company;
 
     constructor(data: any) {
-        this._id = data.id;
-        this._name = data.name;
-        this._username = data.username;
-        this._email = data.email;
-        this._address = data.address;
-        this._phone = data.phone;
-        this._website = data.website;
-        this._company = data.company;
+        this._id = data ? data.id : -1;
+        this._name = data ? data.name : 'Lilyan Lefevre';
+        this._username = data ? data.username : 'default';
+        this._email = data ? data.email : 'default@default.com';
+        this._address = new Address(data ? data.address : null);
+        this._phone = data ? data.phone : '0000000000';
+        this._website = data ? data.website : 'default.fr';
+        this._company = new Company(data ? data.company : null);
     }
 
     get id(): number {
