@@ -18,7 +18,7 @@
     </div>
 
     <ul class="list-group text-start pt-3 ps-2">
-      <li class="list-item active">Accueil</li>
+      <li class="list-item active">Home</li>
       <li class="list-item">Notifications</li>
       <li class="list-item">Messages</li>
       <li class="list-item">Profile</li>
