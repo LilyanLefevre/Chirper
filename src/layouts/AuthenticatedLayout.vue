@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="">
       <Navbar/>
 
       <!-- Page Heading -->
@@ -11,7 +11,7 @@
       </header>
 
       <!-- Page Content -->
-      <main class="mt-5">
+      <main class="pt-6">
         <slot />
       </main>
     </div>

@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import ChirpList from '../components/ChirpList.vue'
 import AuthenticatedLayout from "../layouts/AuthenticatedLayout.vue";
+import ProfileSidePanelComponent from "../components/ProfileSidePanelComponent.vue";
+import {User} from "../classes/User.ts";
 </script>
 
 <template>
   <AuthenticatedLayout>
+    <ProfileSidePanelComponent :user="new User(null)" class="ps-2 pe-4"/>
     <ChirpList/>
   </AuthenticatedLayout>
 </template>
