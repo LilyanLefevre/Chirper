@@ -21,10 +21,12 @@ const load = async ($state: { complete: () => void; loaded: () => void; error: (
 </script>
 
 <template>
-  <div class="result" v-for="tweet in tweets">
-    <TweetComponent :tweet="tweet"></TweetComponent>
+  <div class="d-inline-block" style="width: 60vw;">
+    <div class="result" v-for="tweet in tweets">
+      <TweetComponent :tweet="tweet"></TweetComponent>
+    </div>
+    <InfiniteLoading class="mt-2" @infinite="load" />
   </div>
-  <InfiniteLoading class="mt-2" @infinite="load" />
 </template>
 
 <style scoped>

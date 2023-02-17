@@ -9,10 +9,10 @@
       <div class="flex-grow-1 ms-3 mb-3">
         <div class="text-start">
           <div class="fw-bold">
-            {{ tweet.getUser().getCompleteName() }}
+            {{ tweet.getUser().name }}
           </div>
           <div class="small text-secondary">
-            @{{ tweet.getUser().getUsername() }}
+            @{{ tweet.getUser().username }}
           </div>
         </div>
       </div>
@@ -55,24 +55,11 @@ const props = defineProps({
 
 </script>
 
-<style>
-.tweet{
-  width: 60vw;
-}
-
+<style scoped>
 .tweet:hover{
   background-color: #f8f9fa;
   cursor: pointer;
   transition: background-color 0.3s ease-out 0s
-}
-
-.profile-picture img{
-  width: 50px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.actions{
 }
 
 .action{
