@@ -1,28 +1,17 @@
 <script setup lang="ts">
-import ChirpList from '../components/ChirpList.vue'
 import AuthenticatedLayout from "../layouts/AuthenticatedLayout.vue";
 import ProfileSidePanelComponent from "../components/ProfileSidePanelComponent.vue";
 import {User} from "../classes/User.ts";
-</script>
+import HomeChirpList from "./HomeChirpList.vue";</script>
 
 <template>
   <AuthenticatedLayout>
-    <ProfileSidePanelComponent :user="new User(null)" class="ps-2 pe-4"/>
-    <ChirpList/>
+    <div class="d-flex" style="height: 100vh;">
+      <ProfileSidePanelComponent :user="new User(null)" class="ps-6 pe-5"/>
+      <HomeChirpList/>
+    </div>
   </AuthenticatedLayout>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
 </style>
