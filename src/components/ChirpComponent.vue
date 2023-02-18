@@ -1,5 +1,5 @@
 <template>
-  <div class="tweet border border-light border-2 p-3">
+  <div class="chirp border border-light border-2 p-3">
 
     <div class="d-flex">
       <div class="profile-picture flex-shrink-0">
@@ -9,20 +9,20 @@
       <div class="flex-grow-1 ms-3 mb-3">
         <div class="text-start">
           <div class="fw-bold">
-            {{ tweet.getUser().name }}
+            {{ chirp.user.name }}
           </div>
           <div class="small text-secondary">
-            @{{ tweet.getUser().username }}
+            @{{ chirp.user.username }}
           </div>
         </div>
       </div>
     </div>
     <div>
       <div class="text-start">
-        {{ tweet.getMessage() }}
+        {{ chirp.message }}
       </div>
       <div class="text-start mt-2 mb-2 small text-secondary">
-        {{ tweet.getDate().toLocaleTimeString('fr').substring(0, 5) + " le " + tweet.getDate().toLocaleDateString('fr') }}
+        {{ chirp.date.toLocaleTimeString('fr').substring(0, 5) + " le " + chirp.date.toLocaleDateString('fr') }}
       </div>
 
       <hr>
@@ -30,15 +30,15 @@
       <div class="d-flex actions">
         <div class="action me-2 comment">
           <i class="bi bi-chat text-info"></i>
-          <div class="number">{{ tweet.getComments() }}</div>
+          <div class="number">{{ chirp.comments }}</div>
         </div>
-        <div class="action me-2 retweet">
+        <div class="action me-2 rechirp">
           <i class="bi bi-arrow-repeat text-success"></i>
-          <div class="number">{{ tweet.getRetweets() }}</div>
+          <div class="number">{{ chirp.rechirps }}</div>
         </div>
         <div class="action like">
           <i class="bi bi-heart text-danger"></i>
-          <div class="number">{{ tweet.getLikes() }}</div>
+          <div class="number">{{ chirp.likes }}</div>
         </div>
       </div>
     </div>
@@ -47,16 +47,16 @@
 </template>
 
 <script setup lang="ts">
-import {Tweet} from "../classes/Tweet";
+import {Chirp} from "../classes/Chirp";
 
 const props = defineProps({
-  tweet: Tweet
+  chirp: Chirp
 });
 
 </script>
 
 <style scoped>
-.tweet:hover{
+.chirp:hover{
   background-color: #f8f9fa;
   cursor: pointer;
   transition: background-color 0.3s ease-out 0s
@@ -75,7 +75,7 @@ const props = defineProps({
   color: #fc1313 !important;
 }
 
-.retweet:hover i{
+.rechirp:hover i{
   color: #04b404 !important;
 }
 
