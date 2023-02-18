@@ -1,22 +1,7 @@
 <template>
   <div class="chirp border border-light border-2 p-3">
+    <UserProfile :user="chirp.user"></UserProfile>
 
-    <div class="d-flex">
-      <div class="profile-picture flex-shrink-0">
-        <img src="/images/default_profile_400x400.png" alt="...">
-      </div>
-
-      <div class="flex-grow-1 ms-3 mb-3">
-        <div class="text-start">
-          <div class="fw-bold">
-            {{ chirp.user.name }}
-          </div>
-          <div class="small text-secondary">
-            @{{ chirp.user.username }}
-          </div>
-        </div>
-      </div>
-    </div>
     <div>
       <div class="text-start">
         {{ chirp.message }}
@@ -48,6 +33,7 @@
 
 <script setup lang="ts">
 import {Chirp} from "../classes/Chirp";
+import UserProfile from "./UserProfile.vue";
 
 const props = defineProps({
   chirp: Chirp
