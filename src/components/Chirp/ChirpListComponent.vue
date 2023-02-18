@@ -21,7 +21,7 @@ const load = async ($state: { complete: () => void; loaded: () => void; error: (
 </script>
 
 <template>
-  <div class="d-inline-block overflow-scroll" style="width: 60vw; ">
+  <div class="d-inline-block overflow-scroll" style="width: 50vw; ">
     <div v-for="chirp in chirps">
       <ChirpItemComponent :chirp="chirp"></ChirpItemComponent>
     </div>

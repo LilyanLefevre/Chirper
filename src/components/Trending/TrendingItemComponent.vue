@@ -1,6 +1,6 @@
 <template>
-  <div class="trending pt-2 pb-2 ps-3 pe-3">
-    <div class="small">Popular in {{ trending.category }}</div>
+  <div class="trending pt-2 pb-2 ps-3 pe-3" style="min-width: 20vw">
+    <div class="small">Popular in {{ trending.category }} category</div>
     <div class="fw-bold">{{ trending.name }}</div>
     <div class="small">{{ trending.chirps }} Chirps</div>
   </div>

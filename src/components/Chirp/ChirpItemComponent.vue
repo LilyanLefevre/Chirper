@@ -6,13 +6,12 @@
       <div class="text-start">
         {{ chirp.message }}
       </div>
-      <div class="text-start mt-2 mb-2 small text-secondary">
+
+      <div class=" small text-secondary text-start">
         {{ chirp.date.toLocaleTimeString('fr').substring(0, 5) + " le " + chirp.date.toLocaleDateString('fr') }}
       </div>
 
-      <hr>
-
-      <div class="d-flex actions">
+      <div class="d-flex pt-4">
         <div class="action me-2 comment">
           <i class="bi bi-chat text-info"></i>
           <div class="number">{{ chirp.comments }}</div>
@@ -42,15 +41,19 @@ const props = defineProps({
 </script>
 
 <style scoped>
+.chirp{
+  transition: background-color 0.5s ease-out 0s
+
+}
 .chirp:hover{
-  background-color: #f8f9fa;
+  background-color: rgba(0, 0, 0, 0.03);
   cursor: pointer;
-  transition: background-color 0.3s ease-out 0s
+  transition: background-color 0.5s ease-out 0s
 }
 
 .action{
-  flex: 1;
   display: inline;
+  margin-right: 3rem !important;
 }
 
 .comment:hover i{
@@ -67,7 +70,7 @@ const props = defineProps({
 
 .number{
   margin-left: 0.5vw;
-  display: inherit;
+  display: inline;
 }
 
 </style>

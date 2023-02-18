@@ -96,3 +96,12 @@ button:focus-visible {
 .ps-6{
   padding-left: 4rem !important;
 }
+.pe-6{
+  padding-right: 4rem !important;
+}
+.ps-7{
+  padding-left: 5rem !important;
+}
+.ps-8{
+  padding-left: 6rem !important;
+}

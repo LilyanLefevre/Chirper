@@ -11,8 +11,8 @@ const user = new User(null);
 <template>
   <AuthenticatedLayout>
     <div class="d-flex" style="height: 100vh;">
-      <NavigationPanelComponent :user="user" class="ps-6 pe-5"/>
-      <div class="d-flex gap-4">
+      <NavigationPanelComponent :user="user" class="ps-8 pe-6"/>
+      <div class="d-flex gap-5">
         <ChirpPanelComponent/>
         <TrendingPanelComponent/>
       </div>

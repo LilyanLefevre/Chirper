@@ -13,7 +13,7 @@
       <li class="list-item">Settings</li>
       <li class="list-item chirp-button">Chirp</li>
     </ul>
-    <div class="list-item position-absolute" style="bottom: 1vh; left: 2vh;">
+    <div class="list-item position-absolute" style="bottom: 1vh; left: 8vh;">
       <UserProfile :user="user"></UserProfile>
     </div>
 
