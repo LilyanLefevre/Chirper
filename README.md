@@ -1,4 +1,4 @@
-<img width="350" alt="logo" src="https://user-images.githubusercontent.com/63298010/219892386-5aad4847-d76f-43ec-8ed6-0311d09d131a.png">
+<img align="center" width="350" alt="logo" src="https://user-images.githubusercontent.com/63298010/219892386-5aad4847-d76f-43ec-8ed6-0311d09d131a.png">
 
 # Chirper
 Get ready to join the flock of the unoriginal! That's right, we're all about letting you tweet your words out into the world, in a manner that's oh so familiar. Yes, you heard it right, we're talking about a platform that lets you share your thoughts, opinions, and observations in a way that you've seen a million times before. But wait, there's a twist! We're all about originality here, at least that's what we like to tell ourselves. So, go ahead and let your imagination soar, share your witty quips and clever musings, and watch as your tweets blend in with the rest. After all, it's not like anyone really reads this stuff anyways, right? With 280 characters at your disposal, you have plenty of space to be as unoriginal as you want. So why wait? Join the flock, and tweet your way to mediocrity!
