@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ChirpListComponent from "./ChirpListComponent.vue";
-import {Chirp} from "../classes/Chirp";
+import ChirpItemComponent from "./ChirpItemComponent.vue";
+import {Chirp} from "../../classes/Chirp";
 import InfiniteLoading from "v3-infinite-loading";
 import "v3-infinite-loading/lib/style.css";
 import {ref} from "vue";
@@ -23,7 +23,7 @@ const load = async ($state: { complete: () => void; loaded: () => void; error: (
 <template>
   <div class="d-inline-block overflow-scroll" style="width: 60vw; ">
     <div v-for="chirp in chirps">
-      <ChirpListComponent :chirp="chirp"></ChirpListComponent>
+      <ChirpItemComponent :chirp="chirp"></ChirpItemComponent>
     </div>
     <InfiniteLoading class="mt-2" @infinite="load" />
   </div>

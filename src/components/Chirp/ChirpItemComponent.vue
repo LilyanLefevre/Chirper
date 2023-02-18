@@ -32,8 +32,8 @@
 </template>
 
 <script setup lang="ts">
-import {Chirp} from "../classes/Chirp";
-import UserProfile from "./UserProfile.vue";
+import {Chirp} from "../../classes/Chirp";
+import UserProfile from "../UserProfile.vue";
 
 const props = defineProps({
   chirp: Chirp
