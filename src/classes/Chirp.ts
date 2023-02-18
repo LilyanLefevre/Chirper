@@ -13,7 +13,7 @@ class Chirp {
     constructor(json: any = {
         id: 1,
         user: new User(null),
-        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, elit euismod congue bibendum, erat est blandit velit, vel blandit velit enim vel quam.\n',
+        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, elit euismod congue bibendum, erat est blandit velit, vel blandit velit enim vel quam.\n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, elit euismod congue bibendum, erat est blandit velit, vel blandit velit enim vel quam.\n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, elit euismod congue bibendum, erat est blandit velit, vel blandit velit enim vel quam.\n',
         updated_at: '2023-02-02 20:00:00',
         created_at: '2022-02-01 08:00:00',
         likes: 1024,
@@ -22,7 +22,7 @@ class Chirp {
     }) {
         this._id = json.id;
         this._user = new User(json.user);
-        this._message = json.message;
+        this._message = json.message.length > 280 ? json.message.substring(0, 280).trimEnd() + '...' : json.message
         this._date = new Date(json.updated_at ?? json.created_at);
         this._likes = json.likes;
         this._rechirps = json.rechirps;
