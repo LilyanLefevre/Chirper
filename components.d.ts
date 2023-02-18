@@ -21,6 +21,7 @@ declare module '@vue/runtime-core' {
     ProfileSidePanelComponent: typeof import('./src/components/ProfileSidePanelComponent.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SearchInputComponent: typeof import('./src/components/SearchInputComponent.vue')['default']
     TrendingItemComponent: typeof import('./src/components/Trending/TrendingItemComponent.vue')['default']
     TrendingPanelComponent: typeof import('./src/components/Trending/TrendingPanelComponent.vue')['default']
     Tweet: typeof import('./src/components/Tweet.vue')['default']
