@@ -17,7 +17,6 @@ declare module '@vue/runtime-core' {
     ChirpPanelComponent: typeof import('./src/components/Chirp/ChirpPanelComponent.vue')['default']
     HelloWorld: typeof import('./src/pages/ChirpList.vue')['default']
     HomeChirpList: typeof import('./src/components/Chirp/HomeChirpList.vue')['default']
-    Navbar: typeof import('./src/components/Navbar.vue')['default']
     NavigationPanelComponent: typeof import('./src/components/NavigationPanelComponent.vue')['default']
     ProfileSidePanelComponent: typeof import('./src/components/ProfileSidePanelComponent.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
