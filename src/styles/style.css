@@ -105,3 +105,8 @@ button:focus-visible {
 .ps-8{
   padding-left: 6rem !important;
 }
+
+.no-style-link, .no-style-link:hover, .no-style-link:visited{
+  text-decoration: none;
+  color: inherit;
+}

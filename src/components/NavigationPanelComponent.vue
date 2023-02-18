@@ -1,20 +1,31 @@
 <template>
   <div class="d-inline-block align-top h-auto text-start position-relative">
     <div class="list-item">
-      <a href="#">
+      <Link  to="/">
         <img class="mt-2"  src="../../public/images/logo.svg" alt="Chirper logo" width="50" height="50">
-      </a>
+      </Link>
     </div>
     <ul class="list-group pt-3">
-      <li class="list-item active"><span>Home</span></li>
-      <li class="list-item">Notifications</li>
-      <li class="list-item">Messages</li>
-      <li class="list-item">Profile</li>
-      <li class="list-item">Settings</li>
-      <li class="list-item chirp-button">Chirp</li>
+      <Link disabled to="/home">
+        <li class="list-item active"><span>Home</span></li>
+      </Link>
+      <Link to="/notifications">
+        <li class="list-item">Notifications</li>
+      </Link>
+      <Link to="/messages">
+        <li class="list-item">Messages</li>
+      </Link>
+      <Link to="/settings">
+        <li class="list-item">Settings</li>
+      </Link>
+      <Link to="/chirp">
+        <li class="list-item chirp-button">Chirp</li>
+      </Link>
     </ul>
     <div class="list-item position-absolute" style="bottom: 1vh; left: 8vh;">
-      <UserProfile :user="user"></UserProfile>
+      <Link :to="'/profile/' + user.username">
+        <UserProfile :user="user"></UserProfile>
+      </Link>
     </div>
 
   </div>
@@ -24,10 +35,11 @@
 <script>
 import {User} from "../classes/User.ts";
 import UserProfile from "./UserProfile.vue";
+import Link from "./LinkComponent.vue";
 
 export default {
   name: "ProfileSidePanelComponent",
-  components: {UserProfile},
+  components: {UserProfile, Link},
   props:{
     user:{
       type: User,
