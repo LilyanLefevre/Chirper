@@ -33,6 +33,7 @@ const BootstrapVueNextResolver = (_options: BootstrapVueResolverOptions = {}): A
   return resolvers
 }
 export default defineConfig({
+  base: "/Chirper/",
   plugins: [
     vue(),
     Components({
