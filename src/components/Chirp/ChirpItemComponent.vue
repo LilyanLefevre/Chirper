@@ -35,7 +35,7 @@ import {Chirp} from "../../classes/Chirp";
 import UserProfile from "../UserProfile.vue";
 
 const props = defineProps({
-  chirp: Chirp
+  chirp: Object
 });
 
 </script>

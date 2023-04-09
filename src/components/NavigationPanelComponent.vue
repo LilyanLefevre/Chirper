@@ -2,7 +2,7 @@
   <div class="d-inline-block align-top h-auto text-start position-relative">
     <div class="list-item">
       <Link  to="/">
-        <img class="mt-2"  src="../../public/images/logo.svg" alt="Chirper logo" width="50" height="50">
+        <img class="mt-2"  src="../../images/logo.svg" alt="Chirper logo" width="50" height="50">
       </Link>
     </div>
     <ul class="list-group pt-3">

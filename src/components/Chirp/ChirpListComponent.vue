@@ -22,10 +22,10 @@ const load = async ($state: { complete: () => void; loaded: () => void; error: (
 
 <template>
   <div class="d-inline-block overflow-scroll" style="width: 50vw; ">
-    <div v-for="chirp in chirps.values">
+    <div v-for="chirp in chirps">
       <ChirpItemComponent :chirp="chirp"></ChirpItemComponent>
     </div>
-    <InfiniteLoading class="mt-2" @infinite="load" />
+    <InfiniteLoading class="mt-2" @infinite="load"/>
   </div>
 </template>
 
