@@ -7,27 +7,16 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    BCard: typeof import('bootstrap-vue')['BCard']
-    BImg: typeof import('bootstrap-vue')['BImg']
-    BMedia: typeof import('bootstrap-vue-next')['BMedia']
-    ChirpComponent: typeof import('./src/components/ChirpComponent.vue')['default']
     ChirpItemComponent: typeof import('./src/components/Chirp/ChirpItemComponent.vue')['default']
-    ChirpList: typeof import('./src/components/Chirp/ChirpList.vue')['default']
     ChirpListComponent: typeof import('./src/components/Chirp/ChirpListComponent.vue')['default']
     ChirpPanelComponent: typeof import('./src/components/Chirp/ChirpPanelComponent.vue')['default']
-    HelloWorld: typeof import('./src/pages/ChirpList.vue')['default']
-    HomeChirpList: typeof import('./src/components/Chirp/HomeChirpList.vue')['default']
-    Link: typeof import('./src/components/Link.vue')['default']
     LinkComponent: typeof import('./src/components/LinkComponent.vue')['default']
     NavigationPanelComponent: typeof import('./src/components/NavigationPanelComponent.vue')['default']
-    ProfileSidePanelComponent: typeof import('./src/components/ProfileSidePanelComponent.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SearchInputComponent: typeof import('./src/components/SearchInputComponent.vue')['default']
     TrendingItemComponent: typeof import('./src/components/Trending/TrendingItemComponent.vue')['default']
     TrendingPanelComponent: typeof import('./src/components/Trending/TrendingPanelComponent.vue')['default']
-    Tweet: typeof import('./src/components/Tweet.vue')['default']
-    TweetComponent: typeof import('./src/components/ChirpComponent.vue')['default']
     UserProfile: typeof import('./src/components/UserProfile.vue')['default']
   }
 }

@@ -1,28 +1,28 @@
 <template>
   <div class="chirp border border-light border-2 p-3">
-    <UserProfile :user="chirp.user"></UserProfile>
+    <UserProfile :user="chirp?.user"></UserProfile>
 
     <div>
       <div class="text-start">
-        {{ chirp.message }}
+        {{ chirp?.message }}
       </div>
 
       <div class=" small text-secondary text-start">
-        {{ chirp.date.toLocaleTimeString('fr').substring(0, 5) + " le " + chirp.date.toLocaleDateString('fr') }}
+        {{ chirp?.date.toLocaleTimeString('fr').substring(0, 5) + " le " + chirp?.date.toLocaleDateString('fr') }}
       </div>
 
       <div class="d-flex pt-4">
         <div class="action me-2 comment">
           <i class="bi bi-chat text-info"></i>
-          <div class="number">{{ chirp.comments }}</div>
+          <div class="number">{{ chirp?.comments }}</div>
         </div>
         <div class="action me-2 rechirp">
           <i class="bi bi-arrow-repeat text-success"></i>
-          <div class="number">{{ chirp.rechirps }}</div>
+          <div class="number">{{ chirp?.rechirps }}</div>
         </div>
         <div class="action like">
           <i class="bi bi-heart text-danger"></i>
-          <div class="number">{{ chirp.likes }}</div>
+          <div class="number">{{ chirp?.likes }}</div>
         </div>
       </div>
     </div>
